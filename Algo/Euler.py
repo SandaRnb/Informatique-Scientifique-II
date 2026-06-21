@@ -30,7 +30,7 @@ class Euler:
         return self.w
 
     def affichage(self, t, w):
-        print(f"            t = {t:.6f} | w = {w:.6f}")
+        print(f"            t = {t:.2f} | w = {w:.6f}")
 
 
 def main():
@@ -38,15 +38,14 @@ def main():
     exacte = Euler.solution_exacte(b)
     
     print("Sujet 1")
-    print("Approximation de y(5) utilisatant l'algorithme d'Euler")
+    print("**Approximation de y(5) utilisatant l'algorithme d'Euler")
     print("\n\na) Approximation de y(5) avec Euler avec h=0.2 , h=0.1 et h=0.05")
     
     for h in [0.2, 0.1, 0.05]:
         print(f"\nAvec h = {h:.2f} ")
         approximation = Euler(a, b, h, alpha).euler(afficher=True)
         
-    print(f"\n==>Valeur exacte y(5) = {exacte:.6f}\n")
-
+    
     print("b) Recherche du valeur optimal (par bisection)")
     h = 0.2
     while True:
@@ -56,8 +55,9 @@ def main():
         print(f"            h = {h:.8f} | w = {approximation:.8f}")
         if difference < 1e-6:
             break
-
-    print(f"\nLa valeur optimale  est w = {approximation:.8f} avec h {h:.8f}   ")
+        
+    print(f"\n==>Valeur exacte y(5) = {exacte:.6f}\n")
+    print(f"\nLa valeur optimale  est w = {approximation:.8f} ")
 
 
 if __name__ == "__main__":
