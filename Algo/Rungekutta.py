@@ -48,10 +48,10 @@ def main():
     
     print(f"\nAvec h = {h:.2f} ")
     
-    print("\n(a) Approximation de y en utilisant l'algorithme de Runge-Kutta d'ordre 4 avec h=0.1:")
+    print("\na) Approximation de y en utilisant l'algorithme de Runge-Kutta d'ordre 4 avec h=0.1:")
     RungeKutta(a, b, h, alpha).rungekutta(afficher=True, comparaison=False)
     
-    print("\n(b) Comparaison de celle-ci avec la valeur actuelle de y:")
+    print("\nb) Comparaison de celle-ci avec la valeur actuelle de y:")
     approximation_b = RungeKutta(a, b, h, alpha).rungekutta(afficher=True, comparaison=True)
         
     print(f"\n==>Valeur exacte = {exacte:.6f}\n")

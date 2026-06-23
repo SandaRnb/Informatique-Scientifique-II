@@ -51,10 +51,10 @@ def main():
     print("**Approximation en utilisant l'algorithme de Taylor d'ordre 2")
     print(f"\nAvec h = {h:.2f} ")
     
-    print("\n(a) Approximation de y en utilisant l'algorithme de TAYLOR d'ordre 2 avec h=0.1:")
+    print("\na) Approximation de y en utilisant l'algorithme de TAYLOR d'ordre 2 avec h=0.1:")
     Taylor(a, b, h, alpha).taylor(afficher=True, comparaison=False)
     
-    print("\n(b) Comparaison de celle-ci avec la valeur actuelle de y:")
+    print("\nb) Comparaison de celle-ci avec la valeur actuelle de y:")
     approximation_b = Taylor(a, b, h, alpha).taylor(afficher=True, comparaison=True)
 
     print(f"\n==>Valeur exacte  = {exacte:.6f}\n")
